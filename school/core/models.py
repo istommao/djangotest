@@ -9,7 +9,11 @@ class Classes(models.Model):
 
 class Student(models.Model):
     # 请根据题目说明自行补全完整的Model
-    user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
+    user = models.OneToOneField(User,
+        db_constraint=False,
+        on_delete=models.CASCADE,
+        null=True
+    )
 
     sex = models.SmallIntegerField('性别')
 

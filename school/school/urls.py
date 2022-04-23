@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('api/students/sex/<int:sex>/', CoreViews.student_view, name='students'),
+    path('api/students/<int:student_id>/', CoreViews.student_detail_view, name='student_detail'),
 
     path('api/fibnacci/<int:number>/', CoreViews.fibnacci_view, name='fibnacci'),
 ]
